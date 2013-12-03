@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+root = File.expand_path(File.join(File.dirname(__FILE__),'..'))
+if File.directory?(File.join(root,'.git'))
+  Dir.chdir(root) do
+    begin
+      require 'bundler/setup'
+    rescue LoadError => e
+      warn e.message
+      warn "Run `gem install bundler` to install Bundler"
+      exit -1
+    end
+  end
+end
+
+require 'pdns_tools'
+
+if ARGV.length == 0 or ARGV.include?('-h') or ARGV.include?('--help')
+  lines = []
+  lines << " "
+  lines << "-- This is the pdns_tools gem. --"
+  lines << " "
+  lines << "  Commands:"
+  lines << "    pdns_tools deprovision_zones"
+  lines << "    pdns_tools recursor_stats"
+  lines << "    pdns_tools server_stats"
+  lines << "    pdns_tools install_recursor_forwards"
+  lines << " "
+  puts lines
+end
+
+case ARGV[0]
+  when 'deprovision_zones'
+    dz = PdnsTools::DeprovisionZones.new and dz.deprovision_records_and_domains
+  when 'recursor_stats'
+    PdnsTools::RecursorStats.execute
+  when 'server_stats'
+    ss = PdnsTools::ServerStats.new and ss.hello?
+  when 'install_recursor_forwards'
+    PdnsTools::InstallRecursorForwards.new
+    irf = PdnsTools::InstallRecursorForwards.new and irf.update
+    PdnsTools::InstallRecursorForwards
+end

@@ -1,0 +1,31 @@
+= pdns_tools
+
+* {Homepage}[https://rubygems.org/gems/pdns_tools]
+* {Documentation}[http://rubydoc.info/gems/pdns_tools/frames]
+* {Email}[mailto:mick.gortenmulder at saasplaza.com]
+
+== Description
+
+tools for powerdns management
+
+== Features
+
+== Examples
+
+  require 'pdns_tools'
+
+== Requirements
+
+== Install
+
+  $ gem install pdns_tools
+
+== Synopsis
+
+  $ pdns_tools
+
+== Copyright
+
+Copyright (c) 2013 Mick Gortenmulder
+
+See LICENSE.txt for details.

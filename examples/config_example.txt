@@ -1,0 +1,8 @@
+# Example configuration file for the Pdns_tools gem
+# Save in '/etc/pdns_tools.yml'
+
+InstallRecursorForwards:
+    url: [URL] 
+    user: [USERNAME]
+    password: [PASSWORD]
+    file: /etc/powerdns/recursor-forwards.conf
