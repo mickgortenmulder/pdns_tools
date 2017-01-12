@@ -2,7 +2,7 @@
 
 * {Homepage}[https://rubygems.org/gems/pdns_tools]
 * {Documentation}[http://rubydoc.info/gems/pdns_tools/frames]
-* {Email}[mailto:mick.gortenmulder at gmail.com]
+* {Email}[mailto:mickgortenmulder@gmail.com]
 
 == Description
 
