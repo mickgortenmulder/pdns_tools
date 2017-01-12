@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{tools for powerdns management}
   gem.license       = "MIT"
   gem.authors       = ["Mick Gortenmulder"]
-  gem.email         = "mick.gortenmulder@saasplaza.com"
+  gem.email         = "mickgortenmulder@gmail.com"
   gem.homepage      = "https://rubygems.org/gems/pdns_tools"
 
   gem.files         = `git ls-files`.split($/)
